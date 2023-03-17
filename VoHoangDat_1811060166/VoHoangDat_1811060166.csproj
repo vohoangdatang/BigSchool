@@ -191,12 +191,16 @@
     <Compile Include="Migrations\202303110204108_Check.designer.cs">
       <DependentUpon>202303110204108_Check.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303170846347_AddNameColumnToApplicationUser.cs" />
+    <Compile Include="Migrations\202303170846347_AddNameColumnToApplicationUser.designer.cs">
+      <DependentUpon>202303170846347_AddNameColumnToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Course.cs" />
-    <Compile Include="Models\ApplicationUser.cs.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -319,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303110204108_Check.resx">
       <DependentUpon>202303110204108_Check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303170846347_AddNameColumnToApplicationUser.resx">
+      <DependentUpon>202303170846347_AddNameColumnToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
