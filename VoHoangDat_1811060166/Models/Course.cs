@@ -12,13 +12,13 @@ namespace VoHoangDat_1811060166.Models
 
         public ApplicationUser Lecturer { get; set; }
         [Required]
-        public string LecturerID { get; set; }
+        public string LecturerId { get; set; }
         [Required]
         [StringLength(255)]
         public string Place { get; set; }
         public DateTime Datetime { get; set; }
         public Category Category { get; set; }
         [Required]
-        public byte CategoryID { get; set; }
+        public byte CategoryId { get; set; }
     }
 }

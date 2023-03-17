@@ -18,16 +18,35 @@ namespace VoHoangDat_1811060166.Controllers
             _dbContext = new ApplicationDbContext();
         }
         // GET: Courses
+        [Authorize]
+
+        public ActionResult Create()
+        {
+            var viewModel = new CourseViewModel
+            {
+                Categories = _dbContext.Categories.ToList()
+            };
+            return View(viewModel);
+        }
+
 
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(CourseViewModel viewModel)
         {
+            if (ModelState.IsValid)
+            {
+                viewModel.Categories = _dbContext.Categories.ToList();
+                return View("Create", viewModel);
+            }
+
+
             var course = new Course
             {
-                LecturerID = User.Identity.GetUserId(),
+                LecturerId = User.Identity.GetUserId(),
                 Datetime = viewModel.GetDateTime(),
-                CategoryID = viewModel.Category,
+                CategoryId = viewModel.Category,
                 Place = viewModel.Place
             };
 
@@ -36,5 +55,7 @@ namespace VoHoangDat_1811060166.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
     }
 }
+

@@ -1,4 +1,18 @@
 ﻿/* Set padding to keep content from hitting the edges */
+
+.navbar-inverse{
+    background-color: #ff6a00;
+    border-color: #808080;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+        color: #ffffff;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
 .body-content {
     margin-top: 15px;
     padding-left: 15px;
