@@ -7,7 +7,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using VoHoangDat_1811060166.DTOs;
 using VoHoangDat_1811060166.Models;
-using HttpPostAttribute = System.Web.Http.HttpPostAttribute;
+using HttpPostAttribute = System.Web.Mvc.HttpPostAttribute;
 
 namespace VoHoangDat_1811060166.Controllers
 {
