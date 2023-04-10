@@ -32,9 +32,9 @@ namespace VoHoangDat_1811060166.Models
             .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<ApplicationUser>()
-            .HasMany(u => u.Followers)
-            .WithRequired(f => f.Followee)
-            .WillCascadeOnDelete(false);
+                .HasMany(u => u.Followers)
+                .WithRequired(f => f.Followee)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<ApplicationUser>()
                 .HasMany(u => u.Followees)

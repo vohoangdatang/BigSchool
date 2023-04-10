@@ -25,7 +25,7 @@
                     @course.Lecturer.Name
                     @if (Model.ShowAction)
                     {
-                        <button class="btn-default btn-sm js-toggle-follow" data-user-id="@course.Lecturer">Follow</button>
+                        <button class=" btn btn-default btn-sm js-toggle-follow" data-user-id="@course.LecturerId">Follow</button>
                     }
                 </span>
                 <span class="category">
@@ -48,7 +48,7 @@
             $(".js-toggle-attendance").click(function (e) {
                 var button = $(e.target);
                 $.post("/api/attendances", { courseId: button.attr("data-course-id") })
-                    .done(function () {
+                    .done(function() {
                         button
                             .removeClass("btn-default")
                             .addClass("btn-info")
